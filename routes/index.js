@@ -4,5 +4,9 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express Man' });
+  res.locals({
+                title:'Test!',
+                message: "Hello"
+              });
+  res.render('index');
 };
